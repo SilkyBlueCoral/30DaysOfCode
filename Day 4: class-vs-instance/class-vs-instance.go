@@ -11,7 +11,6 @@ amIOld() should perform the following conditional actions:
 If age<13, print You are young..
 If >=13 and <18, print You are a teenager..
 Otherwise, print You are old..
-
 */
 
 type person struct {
