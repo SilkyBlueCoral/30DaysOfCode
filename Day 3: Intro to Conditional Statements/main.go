@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"bufio"
 	"os"
-	//"strconv"
+	"strconv"
 )
 /*
 Task
@@ -30,17 +30,16 @@ func main() {
 		fmt.Fprintln(os.Stderr, "reading standard input:", err)
 	}
 
-	//x,_:=strconv.ParseInt(line, 0, 64)
+	x,_:=strconv.ParseInt(line, 0, 64)
 
-	fmt.Println(line)
 
-	/*if x%2!=0 || (x>=6 && x<=20){
+	if x%2!=0 || (x>=6 && x<=20){
 
 		fmt.Println("Weird")
 
 	}else {
 
 		fmt.Println("Not Weird")
-	}*/
+	}
 
 }

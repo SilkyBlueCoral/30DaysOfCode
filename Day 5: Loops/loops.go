@@ -19,7 +19,7 @@ func main() {
 
 	for x := 1; x <= 10; x++ {
 
-		y := i * x;
+		y := i * x
 		fmt.Println(strconv.Itoa(i) + " x " + strconv.Itoa(x) + " = " + strconv.Itoa(y))
 
 	}

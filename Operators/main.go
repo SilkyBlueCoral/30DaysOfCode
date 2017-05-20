@@ -2,43 +2,48 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"bufio"
+	"os"
 	"strconv"
 )
-
-
 /*
-There are  lines of numeric input:
-The first line has a double,  mealCost (the cost of the meal before tax and tip).
-The second line has an integer,  tipPercent(the percentage of mealCost being added as tip).
-The third line has an integer,  taxPercent(the percentage of mealCost being added as tax).
-*/
+Task
+Given an integer, , perform the following conditional actions:
+
+If n is odd, print Weird
+If n is even and in the inclusive range of  2 to 5, print Not Weird
+If n is even and in the inclusive range of  6 to 20, print Weird
+If n is even and greater than 20, print Not Weird
+Complete the stub code provided in your editor to print whether or not  is weird.
+
+ */
+
 func main() {
+	//Enter your code here. Read input from STDIN. Print output to STDOUT
 
-
+	var line string
 	scanner := bufio.NewScanner(os.Stdin)
-	var lines []string
-
-
 	for scanner.Scan() {
-		if len(scanner.Text())==0{
+		if len(scanner.Text()) == 0 {
 			break
 		}
-		lines = append(lines, scanner.Text())
-
+		line=scanner.Text() // Println will add back the final '\n'
 	}
-	mealCost,_ :=strconv.ParseFloat(lines[0], 64)
-	tipPercent,_ :=strconv.ParseFloat(lines[1],64)
-	taxPercent,_ :=strconv.ParseFloat(lines[2],64)
+	if err := scanner.Err(); err != nil {
+		fmt.Fprintln(os.Stderr, "reading standard input:", err)
+	}
 
-	tip:=mealCost*(tipPercent/100)
-	tax:=mealCost*(taxPercent/100)
+	x,_:=strconv.ParseInt(line, 0, 64)
 
-	cost:=mealCost+tip+tax
 
-	s:="The total meal cost is "+strconv.FormatFloat(cost,'f',0,64)+" dollars."
+	if x%2!=0 || (x>=6 && x<=20){
 
-	fmt.Println(s)
-	//Print Lines to output
+		fmt.Println("Weird")
+
+	}else {
+
+		fmt.Println("Not Weird")
+	}
+
 }
+
