@@ -2,20 +2,15 @@ package main
 
 import (
 	"fmt"
-	"bufio"
-	"os"
 	"strconv"
 )
 
 func main() {
 
-	scanner := bufio.NewScanner(os.Stdin)
 
 	var i int
-	_, err := fmt.Scanf("%d", &i)
-	if err = scanner.Err(); err != nil {
-		fmt.Fprintln(os.Stderr, "reading standard input:", err)
-	}
+	_, _ = fmt.Scanf("%d", &i)
+
 
 	for x := 1; x <= 10; x++ {
 
